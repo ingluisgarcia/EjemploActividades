@@ -50,9 +50,9 @@ public class Parqueadero implements Serializable {
     public String tiempoConsumido(){
        if(fechaHoraSalida != null){
            long diferenciaEnMinutos = (fechaHoraSalida.getTime() - fechaHoraEntrada.getTime()) / 60000;
-           return Long.toString(diferenciaEnMinutos);
+           return Long.toString(diferenciaEnMinutos)+" minutos";
        }else{
-           return "";
+           return "En uso";
        }
     }
 }
