@@ -49,10 +49,10 @@ public class ParqueaderoAdapter extends BaseAdapter {
         TextView txtHoraSalida = v.findViewById(R.id.txtHoraSalida);
         TextView txtTiempoTranscurrido = v.findViewById(R.id.txtTiempoTranscurrido);
 
-        txtPlaca.setText(listado.get(i).getPlaca());
-        txtHoraEntrada.setText(listado.get(i).getFechaHoraEntrada());
-        txtHoraSalida.setText(listado.get(i).getFechaHoraSalida());
-        txtTiempoTranscurrido.setText(listado.get(i).tiempoConsumido());
+        txtPlaca.setText("Placa: "+listado.get(i).getPlaca());
+        txtHoraEntrada.setText("Hora entrada: "+listado.get(i).getFechaHoraEntrada());
+        txtHoraSalida.setText("Hora salida: "+listado.get(i).getFechaHoraSalida());
+        txtTiempoTranscurrido.setText("Tiempo de uso: "+listado.get(i).tiempoConsumido());
 
         return v;
     }
