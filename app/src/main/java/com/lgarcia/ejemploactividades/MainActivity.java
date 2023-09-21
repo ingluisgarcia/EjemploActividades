@@ -30,12 +30,14 @@ public class MainActivity extends AppCompatActivity {
         btnSalida = findViewById(R.id.btnSalida);
         btnReporte = findViewById(R.id.btnReporte);
 
+        edtPlaca.setText("");
+
         listadoParqueadero = new ArrayList<>();
 
     }
 
     public void ingresar(View v){
-        placa = edtPlaca.getText().toString();
+        placa = edtPlaca.getText().toString().toUpperCase();
         if(listadoParqueadero.isEmpty()){
             listadoParqueadero.add(new Parqueadero(id, placa));
             id++;
